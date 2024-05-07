@@ -4,6 +4,6 @@ This program is designed to provide users with a submission form where they can 
 
 ## Credits
 
-• Front End: Aryo
+• Front End: Aryo  
 • Back End (show image) inspo: Gibe
 
