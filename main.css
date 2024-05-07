@@ -1,0 +1,58 @@
+#kontener {
+    margin: 30px;
+    padding: 30px;
+    background-color: #1d1f21;
+    border-radius: 10px;
+}
+
+#kontenerlight {
+    margin: 30px;
+    padding: 30px;
+    background-color: #c2c6ca;
+    border-radius: 10px;
+}
+
+#konteneroutput {
+    margin: 30px;
+    padding: 75px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+#taytel {
+    margin-bottom: 30px;
+}
+
+#tombol {
+    background-color: #292b2c;
+    border: 2px solid #3a444c;
+    margin-top: 40px;
+    width: 35%;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tombol:a{
+    color: whitesmoke;
+}
+
+#nahida {
+    border: 3.5px solid #2d363b;
+    opacity: 100%;
+    border-radius: 3.5px;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#containeroutput {
+    border: 3px solid #2e8548;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.image-output {
+    width: 50px;
+}

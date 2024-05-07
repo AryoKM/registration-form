@@ -1,0 +1,158 @@
+<html lang="en" data-bs-theme="dark">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link href="main.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+<body>
+<div id="kontener">
+  <main>
+        <div><h4 id="taytel"><u>Form Pendaftaran</u></h4> </div>
+        <form class="needs-validation" novalidate id="FormRegistrasi" onsubmit="return validateForm()">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">Nama</label>
+              <input type="text" class="form-control" id="nama" placeholder="masukkan nama lengkap.." value="" required>
+
+            </div>
+
+            <div class="col-sm-3">
+              <label for="country" class="form-label">Jenis Kelamin</label>
+              <select class="form-select" id="jeniskelamin" required>
+                <option value="">-- Pilih Jenis Kelamin --</option>
+                <option>Laki-laki</option>
+                <option>Perempuan</option>
+              </select>
+            </div>
+
+            <div class="col-sm-3">
+              <label for="address" class="form-label">Tanggal Lahir</label>
+              <input type="date" class="form-control" id="tanggallahir" required>
+
+            </div>
+
+            <div class="col-sm-12">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="masukkan email.." value="" required>
+
+          </div>
+
+            <div class="col-sm-6">
+              <label for="address" class="form-label">Alamat</label>
+              <input type="text" class="form-control" id="alamat" placeholder="masukkan alamat.." value="" required>
+
+            </div>
+
+            <div class="col-sm-6">
+              <label for="address" class="form-label">No. Telpon</label>
+              <input type="text" class="form-control" id="notelp" placeholder="masukkan nomor telpon.." value="" required>
+
+            </div>
+
+            <div class="col-12">
+              <label for="country" class="form-label">Program of Interest ( Jurusan )</label>
+              <select class="form-select" id="poi" required>
+                <option value="">-- Pilih Jurusan --</option>
+                <option>MAN (Management)</option>
+                <option>IMT (Informatics)</option>
+                <option>VCD (Visual Communication & Design)</option>
+              </select>
+
+            </div>
+            
+            <div class="col-sm-6">
+              <label for="address" class="form-label">Nama Ayah</label>
+              <input type="text" class="form-control" id="namaayah" placeholder="masukkan nama ayah.." value="" required>
+
+            </div>
+
+            <div class="col-sm-6">
+              <label for="address" class="form-label">Nama Ibu</label>
+              <input type="text" class="form-control" id="namaibu" placeholder="masukkan nama ibu.." value="" required>
+
+            </div>
+
+            <div class="col-12">
+              <label for="photoInput" class="form-label">Photo</label>
+              <input type="file" class="form-control" id="photoInput" name="photo" accept="image/*" required>
+            </div>
+
+            <button class="btn" id="tombol" type="submit">Submit</button>
+        </form>
+  </main>
+</div>
+
+  <hr id="nahida">
+
+  <button id="btnSwitch">Switch Theme</button>
+
+  <div id="konteneroutput" data-bs-theme="dark">
+    <h4 style="color: whitesmoke;">Output</h4>
+  <div id="containeroutput">
+    
+
+    <div class="output" id="outputDiv"></div>
+  
+  </div></div>
+
+
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script>
+  document.getElementById("FormRegistrasi").addEventListener("submit", function(event) {
+    event.preventDefault();
+  
+    var formData = {};
+  
+    var inputs = document.querySelectorAll("#FormRegistrasi input, #FormRegistrasi select");
+  
+    inputs.forEach((input) => {
+      formData[input.id] = input.type === "file"? input.files[0].name : input.value;
+    });
+    let file = document.getElementById("photoInput").files[0];
+    let image = document.createElement("img");
+    var reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function () {
+        localStorage.setItem("image", reader.result);
+        image.setAttribute("src", localStorage.getItem("image"));
+        image.setAttribute("class", "image-output");
+    };
+  
+    var output = `
+      Nama: ${formData.nama}<br>
+      Jenis Kelamin: ${formData.jeniskelamin}<br>
+      Tanggal Lahir: ${formData.tanggallahir}<br>
+      Email: ${formData.email}<br>
+      Alamat: ${formData.alamat}<br>
+      Nomor Telpon: ${formData.notelp}<br>
+      Program of Interest: ${formData.poi}<br>
+      Nama Ayah: ${formData.namaibu}<br>
+      Nama Ibu: ${formData.namaayah}<br>
+      Photo:
+    `;
+  
+    document.getElementById("outputDiv").innerHTML = output;
+    document.getElementById("outputDiv").appendChild(image);
+  });
+      </script>
+
+      <script>
+document.getElementById('btnSwitch').addEventListener('click',()=>{
+  if (document.documentElement.getAttribute('data-bs-theme') == 'dark') {
+    document.documentElement.setAttribute('data-bs-theme','light');
+    document.getElementById('kontener').id = 'kontenerlight';
+  } else {
+    document.documentElement.setAttribute('data-bs-theme','dark');
+    document.getElementById('kontenerlight').id = 'kontener';
+  }
+})
+      </script>
+
+</body>
+</html>
