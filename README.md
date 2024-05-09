@@ -7,3 +7,4 @@ This program is designed to provide users with a submission form where they can 
 • Front End: Aryo  
 • Back End (show image) inspo: Gibe
 
+big thanks to gibe for fixing the image not showing in output.
