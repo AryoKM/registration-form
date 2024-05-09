@@ -23,21 +23,25 @@
     margin-bottom: 30px;
 }
 
-#tombol {
+#tomboldm {
     background-color: #292b2c;
     border: 2px solid #3a444c;
     margin-top: 40px;
     width: 35%;
-    height: 45px;
     margin-left: auto;
     margin-right: auto;
 }
 
-#tombol:a{
-    color: whitesmoke;
+#tombollm {
+    background-color: #e4e4e4;
+    border: 2px solid #ffffff;
+    margin-top: 40px;
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#nahida {
+#pembatas {
     border: 3.5px solid #2d363b;
     opacity: 100%;
     border-radius: 3.5px;
@@ -47,10 +51,37 @@
     margin-bottom: 50px;
 }
 
+#pembatas1 {
+    border: 3.5px solid #c2c6ca;
+    opacity: 100%;
+    border-radius: 3.5px;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#outputDiv {
+    color: #dde2e6;
+}
+
 #containeroutput {
     border: 3px solid #2e8548;
     border-radius: 20px;
     padding: 15px;
+}
+
+.btn {
+    margin-top: 15px;
+    margin-right: 50px;
+    border: 2px solid;
+    background-color: transparent;
+}
+
+.div-tombol {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .image-output {
