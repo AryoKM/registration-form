@@ -16,5 +16,5 @@ big thanks to gibe for fixing the image not showing in output.
 3. press the submit button
 
 [!NOTE]
-• further customize the form by adding <div class="col-sm-3">*..label and form type here*</div>
-• fcustomize where the output is directed in *functions.js* (default is in index.html)
+further customize the form by adding <div \class="col-sm-3">*..label and form type here*</div>
+customize where the output is directed in *functions.js* (default is in index.html)
