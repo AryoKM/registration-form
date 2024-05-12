@@ -15,6 +15,6 @@ big thanks to gibe for fixing the image not showing in output.
 2. fill all the fields
 3. press the submit button
 
-[!NOTE]
-further customize the form by adding <div \class="col-sm-3">*..label and form type here*</div>
+[!NOTE] further customize the form by adding <div class="col-sm-3">*..label and form type here*</div>
+
 customize where the output is directed in *functions.js* (default is in index.html)
